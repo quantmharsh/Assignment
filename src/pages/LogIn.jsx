@@ -10,7 +10,7 @@ const LogIn = () => {
 
   const checkUserCredentials = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/users?email=${email}&password=${password}`);
+      const response = await fetch(`http://localhost:3000/users?email=${email}&password=${password}`);
 
       if (response.ok) {
         const matchedUsers = await response.json();

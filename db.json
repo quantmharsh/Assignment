@@ -44,6 +44,11 @@
       "id": "7c61",
       "email": "Harsh@gmail.com",
       "password": "Quantam123"
+    },
+    {
+      "id": "fb61",
+      "email": "Battle@gmail.com",
+      "password": "battle123"
     }
   ],
   "products": [
@@ -145,5 +150,18 @@
     }
   ],
   "orders": [],
-  "favourites": []
+  "favourites": [
+    {
+      "id": "0d09",
+      "productId": "12"
+    },
+    {
+      "id": "aa27",
+      "productId": "2"
+    },
+    {
+      "id": "ab93",
+      "productId": "5"
+    }
+  ]
 }

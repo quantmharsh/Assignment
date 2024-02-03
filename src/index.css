@@ -65,3 +65,23 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.cart-item {
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 20vw; /* Example width, adjust based on your layout needs */
+  height: 20vw; /* Making height equal to width */
+  margin: 0.5rem; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item img {
+  max-width: 90%; /* Adjust image size within the cart item */
+  max-height: 90%; /* Adjust based on your needs */
+}
+
+.cart-item div {
+  text-align: center;
+}

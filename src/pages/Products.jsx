@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import MainLayout from '../layout/MainLayout';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -7,7 +8,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:3001/products');
+        const response = await fetch('http://localhost:3000/products');
         if (!response.ok) throw new Error('Data could not be fetched!');
         const data = await response.json();
         setProducts(data);
@@ -23,13 +24,34 @@ const Products = () => {
     setSelectedProduct(product);
   };
 
-  const handleAddToCart = (product) => {
+  const handleAddToCart = async (product) => {
     console.log("Adding to cart:", product);
     // Here, you would add the product to your cart's state or context
+    try {
+      const response = await fetch('http://localhost:3000/favourites', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productId: product.id,
+          // Include any other product details you deem necessary
+        }),
+      });
+      if (response.ok) {
+        console.log('Product added to favourites successfully');
+        // Optionally, update UI or state to reflect the change
+      } else {
+        console.error('Failed to add product to favourites');
+      }
+    } catch (error) {
+      console.error('Error adding product to favourites:', error);
+    }
   };
 
   return (
     <>
+    <MainLayout>
       <div className="products-container flex w-screen h-screen justify-center items-center bg-blue-100">
         <div className='flex w-[90%] h-screen'>
 
@@ -51,7 +73,7 @@ const Products = () => {
         {selectedProduct && (
           <div className='flex w-4 justify-center items-start m-auto'>
             <div className="product-popup flex absolute inset-0 h-screen items-center justify-center bg-black bg-opacity-50">
-              <div className="product-detail-card flex flex-col bg-white p-4 w-[15cm] h-[13cm] rounded-md">
+              <div className="product-detail-card flex flex-col bg-white p-4 w-[15cm] h-[15cm] rounded-md">
                 {/* <div className="product-popup">
           <div className="product-detail-card"> */}
                 {/* <div> */}
@@ -74,8 +96,8 @@ const Products = () => {
                 <div className='m-2'>
                   <p>Rating: {selectedProduct.rating} / 5</p>
                 </div>
-                <button onClick={() => handleAddToCart(selectedProduct)}>Add to Cart</button>
-                <button onClick={() => setSelectedProduct(null)}>Close</button>
+                <button  className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded' onClick={() => handleAddToCart(selectedProduct)}> Add to Cart 🛒</button>
+                <button  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"onClick={() => setSelectedProduct(null)}>Close❌</button>
                 {/* </div> */}
               </div>
               <div className="popup-overlay" onClick={() => setSelectedProduct(null)}></div>
@@ -83,6 +105,7 @@ const Products = () => {
           </div>
         )}
       </div >
+     </MainLayout>
     </>
   );
 };
