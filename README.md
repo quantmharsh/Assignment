@@ -30,7 +30,7 @@ Backend Integration: Utilized a mock JSON server to simulate backend functionali
 - ` json-server --watch db.json --port 3000` - To start the JSON server
 - `npm start` - To start the react app
 
-## This project's user interface should like this.
+## project's user interface .
 
 ### Login/Register page
 
