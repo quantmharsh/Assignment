@@ -21,14 +21,7 @@ Backend Integration: Utilized a mock JSON server to simulate backend functionali
 
 
 
-## How should the application work?
 
-The user of this react application should be able to view all the products. The application should have the following workflow,
-
-1. Create the login/register functionality.
-2. Once the user is authenticated
-3. Users can add the products to the cart page
-4. Also user can add their favourite products
 
 ## Development Setup
 
@@ -50,17 +43,32 @@ The user of this react application should be able to view all the products. The 
 
 ### Home page
 
-<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="screenshots\signup page.png">
+<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="screenshots\products home page.png">
 
 ### Product detail page
 
-<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/52570524/180701655-7c3d3120-ff81-445a-81d9-b2152db8a776.png">
+<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="screenshots\detail product.png">
+
+### Added Successfully to Cart
+<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="screenshots\added succesfully to card.png">
+
 
 ### Cart page
 
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/52570524/180701661-a587033d-4616-40f8-9260-dfd3e8b97152.png">
+<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="screenshots\cart page.png">
 
-<img width="1472" alt="Screenshot 2022-07-24 at 10 51 16 AM" src="https://user-images.githubusercontent.com/52570524/180701674-31c7e11c-56b3-4f24-83c4-e9d582c4b3f8.png">
+### Remove Item From Cart
+
+<img width="1472" alt="Screenshot 2022-07-24 at 10 51 16 AM" src="screenshots\item removed from cart.png">
+
+### Order Receipt Page
+
+<img width="1472" alt="Screenshot 2022-07-24 at 10 51 16 AM" src="screenshots\order reciept page.png">
+
+### Order Placed Successfully
+<img width="1472" alt="Screenshot 2022-07-24 at 10 51 16 AM" src="screenshots\confirmed order popup.png">
+
+
 
 ## API Usage
 
