@@ -1,30 +1,6 @@
 {
   "users": [
-    {
-      "id": "e9d9",
-      "email": "aman@gmail.com",
-      "password": "aman1234"
-    },
-    {
-      "id": "b457",
-      "email": "raunak@gmail.com",
-      "password": "raunak1234"
-    },
-    {
-      "id": "3645",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "bbd5",
-      "email": "Harsh@gmail.com",
-      "password": "Quantam123"
-    },
-    {
-      "id": "cda8",
-      "email": "Harsh@gmail.com",
-      "password": "Quantam123"
-    },
+   
     {
       "id": "0d8a",
       "email": "Harsh@gmail.com",
@@ -187,14 +163,7 @@
     {
       "id": "5a16",
       "productId": "1"
-    },
-    {
-      "id": "0ccb",
-      "productId": "6"
-    },
-    {
-      "id": "7ab7",
-      "productId": "6"
     }
+    
   ]
 }

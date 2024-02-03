@@ -2,27 +2,24 @@
 
 ## Overview
 
-To complete this assessment, you will need to use this [Ecommerce-boilerplate](https://github.com/gurukishore111/Ecommerce-boilerplate) web app.
+I am pleased to announce the completion of my recent assignment, which focused on developing a comprehensive e-commerce web application. This project was designed to showcase my skills in web development, particularly in creating responsive and user-friendly interfaces, implementing essential e-commerce functionalities, and ensuring a seamless user experience.
 
-The purpose of this assessment is to assess your **skills and approach to composing a simple web app** given an API feed.
+### Key Features Implemented
+User Authentication: Implemented a secure login and registration system allowing users to create and access their accounts. This feature includes validation checks to ensure data integrity and security.
 
-## What to do?
+Product Display and Management: Developed functionalities to display products dynamically on the home page. Users can view detailed information about each product, including descriptions, prices, and ratings, through a well-organized product detail page.
 
-Your goal is to implement an eCommerce application. The CSS framework/library is totally up to you.
+Cart Functionality: Integrated a cart system where users can add products, adjust quantities, and view their cart's total cost. This feature enhances the shopping experience by allowing users to manage their selections effectively.
 
-Although it's a very basic exercise, we will be looking for simple, well-designed, well-commented, and tested code in the submission.
+Favorites List: Added the ability for users to mark products as favorites, creating a personalized list of items they are interested in. This functionality encourages user engagement and return visits.
 
-Please include a `README` with setup instructions and any other documentation you created as part of your solution.
+Responsive Design: Ensured the application is fully responsive, providing an optimal browsing experience across various devices and screen sizes. This was achieved by using modern CSS frameworks and best practices in responsive design.
 
-Also, add very short info for the following to your `README`:
+Backend Integration: Utilized a mock JSON server to simulate backend functionalities, including fetching data for users, products, orders, and favorites. This approach allowed for the development and testing of frontend interactions in a realistic environment.
 
-- Describe all the application functionalities
-- Are there any improvements you could make to your submission?
-- What would you do differently if you were allocated more time?
 
-Once you complete implementation, please add the link to the hosted repository (e.g. Github). Alternatively, you may submit your code as a ZIP file too.
 
-(NOTE: You have to use the latest version of v18 and react-router-dom v6)
+
 
 ## How should the application work?
 
@@ -37,18 +34,23 @@ The user of this react application should be able to view all the products. The 
 
 - Clone this repo
 - `npm install` - To install the dependencies
-- `npm run server` - To start the JSON server
+- ` json-server --watch db.json --port 3000` - To start the JSON server
 - `npm start` - To start the react app
 
 ## This project's user interface should like this.
 
 ### Login/Register page
 
-<img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/52570524/180701451-5ccce009-0384-426c-b1bc-d7536fd7b142.png">
+<img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="screenshots\signup page.png">
+
+### Signup Successfull pop up window page
+<img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="screenshots\signup popup notification.png">
+
+
 
 ### Home page
 
-<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="https://user-images.githubusercontent.com/52570524/180701523-b679c753-68ff-47f1-9a1b-f4cc04d88fea.png">
+<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="screenshots\signup page.png">
 
 ### Product detail page
 
