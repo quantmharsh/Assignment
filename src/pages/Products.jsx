@@ -4,6 +4,8 @@ import MainLayout from '../layout/MainLayout';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [addToCartButtonText, setAddToCartButtonText] = useState('🛒 Add to Cart');
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -40,6 +42,12 @@ const Products = () => {
       });
       if (response.ok) {
         console.log('Product added to favourites successfully');
+        setAddToCartButtonText('Added Successfully ✅');
+      
+        // Optionally, revert the button text back after a few seconds
+        setTimeout(() => {
+          setAddToCartButtonText('🛒 Add to Cart');
+        }, 3000); // Adjust time as needed
         // Optionally, update UI or state to reflect the change
       } else {
         console.error('Failed to add product to favourites');
@@ -58,14 +66,22 @@ const Products = () => {
           {/* <h2>Our Products</h2> */}
           <div className="product-list grid grid-cols-5 gap-2">
             {products.map((product) => (
-              <div key={product.id} className="product flex flex-col border-gray-300 border-[1px] bg-white max-w-[7cm] m-4" onClick={() => handleProductClick(product)}>
-                <div className='flex justify-center items-center'>
-                  <img src={product.image} alt={product.title} style={{ width: '100px', height: '100px' }} />
-                </div>
-                <div className='flex text-sm p-2'>
-                  <p>{product.title}</p>
-                </div>
-              </div>
+               <div key={product.id} className="product flex flex-col border-gray-300 border-[1px] bg-white max-w-[7cm] m-4 relative" onClick={() => handleProductClick(product)}>
+               <div className='flex justify-center items-center'>
+                 <img src={product.image} alt={product.title} style={{ width: '100px', height: '100px' }} />
+               </div>
+               <div className='flex flex-col text-sm p-2'>
+                 <p>{product.title}</p>
+                 {/* Amount on the right */}
+                 <div className="absolute top-2 right-2 text-xs font-semibold">
+                   ${product.amount}
+                 </div>
+                 {/* Rating on the left */}
+                 <div className="absolute top-2 left-2 text-xs font-semibold">
+                   ⭐{product.rating}
+                 </div>
+               </div>
+             </div>
             ))}
           </div>
         </div>
@@ -96,11 +112,14 @@ const Products = () => {
                 <div className='m-2'>
                   <p>Rating: {selectedProduct.rating} / 5</p>
                 </div>
-                <button  className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded' onClick={() => handleAddToCart(selectedProduct)}> Add to Cart 🛒</button>
+                <button className='bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded' onClick={() => handleAddToCart(selectedProduct)}>
+  {addToCartButtonText}
+</button>
+
                 <button  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"onClick={() => setSelectedProduct(null)}>Close❌</button>
                 {/* </div> */}
               </div>
-              <div className="popup-overlay" onClick={() => setSelectedProduct(null)}></div>
+              {/* <div className="popup-overlay" onClick={() => setSelectedProduct(null)}></div> */}
             </div>
           </div>
         )}

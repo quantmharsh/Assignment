@@ -49,6 +49,21 @@
       "id": "fb61",
       "email": "Battle@gmail.com",
       "password": "battle123"
+    },
+    {
+      "id": "7b51",
+      "email": "prince@gmail.com",
+      "password": "prince123"
+    },
+    {
+      "id": "364f",
+      "email": "Pat@gmail.com",
+      "password": "pat123"
+    },
+    {
+      "id": "5903",
+      "email": "avani123@gmail.com",
+      "password": "avani123"
     }
   ],
   "products": [
@@ -152,16 +167,24 @@
   "orders": [],
   "favourites": [
     {
-      "id": "0d09",
-      "productId": "12"
-    },
-    {
       "id": "aa27",
       "productId": "2"
     },
     {
-      "id": "ab93",
-      "productId": "5"
+      "id": "b12b",
+      "productId": "9"
+    },
+    {
+      "id": "5a16",
+      "productId": "1"
+    },
+    {
+      "id": "68c9",
+      "productId": "1"
+    },
+    {
+      "id": "dd21",
+      "productId": "1"
     }
   ]
 }

@@ -46,8 +46,8 @@ const LogIn = () => {
 
   return (
     <>
-      <div className="flex h-screen bg-slate-800">
-        <div className="flex bg-slate-400 w-72 h-64 justify-center m-auto">
+      <div className="flex h-screen bg-pink-200">
+        <div className="flex bg-blue-400 w-80 h-72 justify-center m-auto rounded-3xl">
           <div className="flex flex-col m-auto">
 
             <label>Email:</label>
