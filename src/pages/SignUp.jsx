@@ -8,7 +8,7 @@ const SignUp = () => {
 
   const handleSignUp = async () => {
     try {
-      const response = await fetch('http://localhost:3000/users', {
+      const response = await fetch('http://localhost:3001/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const SignUp = () => {
   return (
     <>
       <div className="flex h-screen bg-slate-800">
-        <div className="flex bg-slate-400 w-72 h-72 justify-center m-auto">
+        <div className="flex bg-slate-400 w-72 h-64 justify-center m-auto">
           <div className="flex flex-col m-auto">
 
             <label>Email:</label>
@@ -49,7 +49,7 @@ const SignUp = () => {
             />
             <button onClick={handleSignUp} className="bg-blue-200 p-1 m-2 rounded-md" type="submit">Sign Up</button>
 
-            <Link to="/login"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Go to Login</button></Link>
+            <Link to="/"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">Go to Login</button></Link>
 
           </div>
         </div>
