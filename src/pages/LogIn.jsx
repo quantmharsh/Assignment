@@ -10,7 +10,7 @@ const LogIn = () => {
 
   const checkUserCredentials = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/users?email=${email}&password=${password}`);
+      const response = await fetch(`http://localhost:3001/users?email=${email}&password=${password}`);
 
       if (response.ok) {
         const matchedUsers = await response.json();
@@ -58,7 +58,8 @@ const LogIn = () => {
 
             <button onClick={handleLogin} className="bg-blue-200 p-1 m-2 rounded-md">Log In</button>
 
-            <Link to="/"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Go to SignUp</button></Link>
+            <h4>New User? Create an account.</h4>
+            <Link to="/signup"><button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded">SignUp</button></Link>
           </div>
         </div>
       </div>
